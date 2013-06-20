@@ -1,0 +1,7 @@
+cc-get version 0.1.1
+Usage: cc-get <action> [<program>]
+Actions:
+	install <program>
+	update
+	remove <program>
+	list

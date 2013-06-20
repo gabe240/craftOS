@@ -1,0 +1,15 @@
+term.clear()
+term.setCursorPos(1,1)
+
+print("A heavily modified, and ported version \nof redworks from Joe")
+print("its open source and can be edited, whenever you want, make it yours!")
+bRunning = true
+print("\nPress BACKSPACE to return.")
+while bRunning do
+event, param1, param2 = os.pullEvent()
+if event == "key" and param1 == 14 then
+shell.run("disk/startup")
+elseif param1 ~= 14 then
+shell.run("disk/info")
+end
+end

@@ -1,0 +1,48 @@
+function clear()
+term.clear()
+term.setCursorPos(1,1)
+end
+
+clear()
+shell.run('disk/mem/redworks/apis/redworks')
+print("                                  _____  __             .___         _________")
+print(" __ __  ____   ________________ _/ ____\/  |_  ____   __| _/   ____ /   _____/")
+print("|  |  \/    \_/ ___\_  __ \__  \\   __\\   __\/ __ \ / __ |   /  _ \\_____  \ ")
+print("|  |  /   |  \  \___|  | \// __ \|  |   |  | \  ___// /_/ |  (  <_> )        \")
+print("|____/|___|  /\___  >__|  (____  /__|   |__|  \___  >____ |   \____/_______  /")
+print("           \/     \/           \/                 \/     \/                \/ ")
+
+showWindow(12,6,25,8,"uncraft, by joe" ..version().. " Floppy","1. About\n2. Setup\n3. Uninstall\n4. info\n5. Quit\n")
+term.setCursorPos(1,16)
+write"Choose a selection: "
+
+input = read()
+
+if input=="1" then
+shell.run("disk/about")
+	
+elseif input=="2" then
+shell.run("disk/setup")
+
+elseif input ="3" then
+shell.run("disk/uninstall")
+
+elseif input=="4" then
+shell.run("disk/credits")
+
+elseif input=="5" then
+term.clear()
+term.setCursorPos(7,6)
+sprint("Thank you for choosing uncrafted FOO")
+term.setCursorPos(10,8)
+sprint("Goodbye :D")
+sleep(2)
+os.shutdown()
+
+else
+term.setCursorPos(1,16)
+term.clearLine()
+write("no eastereggs here, not yet, not like, oh well idk")
+sleep(1.5)
+shell.run("disk/startup")
+end
